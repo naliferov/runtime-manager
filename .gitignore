@@ -1,6 +1,6 @@
 token
 updates.json
-services/*/services.log
-services/*/pid
-services/*/input
+src/services/*/services.log
+src/services/*/pid
+src/services/*/input
 node_modules
