@@ -2,12 +2,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/png" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.svg">
     
 
   <title>html-runtime</title><style>@font-face {
   font-family: 'JetBrains Mono';
-  src: url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+  src: url('font/JetBrainsMono-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('/font/JetBrainsMono-Bold.woff2') format('woff2');
+  src: url('font/JetBrainsMono-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -82,7 +82,8 @@ body {
 }
 
 .click,
-.category {
+.category,
+.object {
   cursor: pointer;
 }
 
@@ -147,9 +148,9 @@ body {
 <div class="object">
        
 <div class="category">movies</div>
-       <div class="objects">
-<div class="object">the dark knight (2008)</div><div class="object">the godfather (1972)</div><div class="object">the shawshank redemption (1994)</div>
-<div class="object">12 angry men (1957)</div></div>
+       <div class="objects hidden">
+<div class="object">the shawshank redemption (1994)</div><div class="object">the godfather (1972)</div><div class="object">the dark knight (2008)</div>
+<div class="object">12 angry men (1957)</div><div class="object">the lord of the rings</div><div class="object">schindler's list (1993)</div><div class="object">pulp fiction (1994)</div><div class="object">the good, the dad and the ugly (1966)</div></div>
 </div><div class="object">
        
 <div class="category">series</div>
@@ -194,9 +195,9 @@ body {
 <div class="object">
        
 <div class="category">project-ideas</div>
-       <div class="objects">
+       <div class="objects hidden">
 
-<div class="object">improve UX of this system</div><div class="object">point of sync on digital ocean. microservices</div><div class="object">мир сочетающий реальные и нереальные объекты</div><div class="object">find new ideas</div><div class="object">automate routine on job</div><div class="object">connection between words</div><div class="object">Мир слов и идей и создать набор задач наперед. создать набор идей</div><div class="object">video editor</div><div class="object">record from radio, youtube</div><div class="object">схему найти с процессами</div></div>
+<div class="object">point of sync on digital ocean. microservices</div><div class="object">мир сочетающий реальные и нереальные объекты</div><div class="object">find new ideas</div><div class="object">automate routine on job</div><div class="object">connection between words</div><div class="object">Мир слов и идей и создать набор задач наперед. создать набор идей</div><div class="object">video editor</div><div class="object">record from radio, youtube</div><div class="object">схему найти с процессами</div></div>
 </div></div>
 </div><div class="object">
        
@@ -216,11 +217,11 @@ body {
 <div class="object">logic</div><div class="object">math</div>
 <div class="object">statistics</div><div class="object">
        <div class="category">computer science</div>
-       <div class="objects"><div class="object">
+       <div class="objects hidden"><div class="object">
        <div class="category">arch and patterns</div>
-       <div class="objects"><div class="object">
+       <div class="objects hidden"><div class="object">dry</div><div class="object">
        <div class="category">gof</div>
-       <div class="objects"><div class="object">
+       <div class="objects hidden"><div class="object">
        <div class="category">creational</div>
        <div class="objects"><div class="object">factory method</div><div class="object">abstract factory</div><div class="object">builder</div><div class="object">prototype</div><div class="object">singleton</div></div>
 </div><div class="object">
@@ -233,10 +234,20 @@ body {
        <div class="objects"><div class="object">chain of responsibility</div><div class="object">command
 </div><div class="object">iterator</div><div class="object">mediator</div><div class="object">memento</div><div class="object">observer</div><div class="object">state</div><div class="object">strategy</div><div class="object">template method</div><div class="object">visitor</div></div>
 </div></div>
-</div><div class="object">grasp</div><div class="object">solid</div></div>
+</div><div class="object">
+       <div class="category">grasp</div>
+       <div class="objects hidden"><div class="object">information expert</div><div class="object">creator
+</div><div class="object">controller</div><div class="object">indirection</div><div class="object">low coupling</div><div class="object">high cohesion</div><div class="object">polymorphism</div><div class="object">protected variations</div><div class="object">pure fabrication</div></div>
+</div><div class="object">kiss</div><div class="object">
+       <div class="category">solid</div>
+       <div class="objects"><div class="object">single responsibility</div><div class="object">open–closed principle</div><div class="object">liskov substitution</div><div class="object">interface segregation</div><div class="object">dependency inversion</div></div>
+</div></div>
 </div><div class="object">
        <div class="category">infastructure</div>
-       <div class="objects hidden"><div class="object">aws</div><div class="object">kubernetes</div></div>
+       <div class="objects"><div class="object">aws</div><div class="object">
+       <div class="category">kubernetes</div>
+       <div class="objects"><div class="object">cluster</div><div class="object">node</div><div class="object">deployment</div><div class="object">replicaSet</div><div class="object">statefulSet</div><div class="object">daemonSet</div><div class="object">pod</div><div class="object">job</div><div class="object">cronJob</div><div class="object">service</div><div class="object">ingress</div><div class="object">configMap</div><div class="object">secret</div><div class="object">volume</div><div class="object">persistentVolume</div></div>
+</div></div>
 </div><div class="object">
        
 <div class="category">db</div>
@@ -268,7 +279,7 @@ body {
 </div><div class="object">
        
 <div class="category">applied science</div>
-       <div class="objects">
+       <div class="objects hidden">
 
 <div class="object">
        <div class="category">engineering</div>
@@ -281,7 +292,7 @@ body {
 <div class="object">
        
 <div class="category">runtime</div>
-       <div class="objects hidden">
+       <div class="objects">
 
 <div class="object">
 
@@ -298,10 +309,9 @@ body {
     border: 1px solid;
     width: fit-content;
     padding: 5px;
-    margin-top: 10px;
 " id="init-css" class="code hidden">@font-face {
   font-family: 'JetBrains Mono';
-  src: url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+  src: url('font/JetBrainsMono-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -309,7 +319,7 @@ body {
 
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('/font/JetBrainsMono-Bold.woff2') format('woff2');
+  src: url('font/JetBrainsMono-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -376,7 +386,8 @@ body {
 }
 
 .click,
-.category {
+.category,
+.object {
   cursor: pointer;
 }
 
@@ -385,7 +396,6 @@ body {
 }<br></div></div><div class="click to-id--show-hide target--next-element-sibling">init js</div>
 
 <div contenteditable="plaintext-only" style="
-    margin-top: 10px;
     padding: 5px;
 " class="frame code hidden" id="init-script">document.querySelectorAll('style').forEach((el) =&gt; el.remove())
 
@@ -504,13 +514,13 @@ const ob = new MutationObserver(callback)
     <div class="click to-id--show-hide target--next-element-sibling">console</div>
 
 <div contenteditable="plaintext-only" style="
-" class="code frame js-fn hidden" id="console">(x) =&gt; {
+" class="code frame js-fn" id="console">(x) =&gt; {
   const el = x.parentNode.children[1]
 
   x.f = (str) =&gt; {
     el.innerHTML += `&lt;div&gt;${str}&lt;div&gt;`
   }
-}<div><br><div></div></div></div></div><div class="object">
+}<div><div></div></div></div></div><div class="object">
 
 
 
@@ -536,13 +546,13 @@ const ob = new MutationObserver(callback)
 </div><div class="object">
        
 <div class="category">projects</div>
-       <div class="objects hidden">
+       <div class="objects">
 <div class="object">
        
 <div class="category">html-runtime</div>
        <div class="objects">
 <div class="object">терминал для ввода операции</div>
-<div class="object">более удобный интерфейс</div><div class="object">позже редактор добавить справа</div></div>
+<div class="object">improve UX of this system</div><div class="object">позже редактор добавить справа</div><div class="object">подсветку кода сделать цветной</div><div class="object">сделать как-то подсветку контрактов сущности</div></div>
 </div><div class="object">service manager</div>
 </div>
 </div></div></div>
